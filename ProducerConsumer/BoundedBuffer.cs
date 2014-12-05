@@ -22,7 +22,7 @@ namespace ProducerConsumer
 
         public bool IsFull()
         {
-            bool result = _queue.Count >= _buffersize;
+            bool result = _queue.Count >= _buffersize; 
             return result;
         }
 
