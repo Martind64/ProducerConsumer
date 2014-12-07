@@ -11,12 +11,13 @@ namespace ProducerConsumer
     {
         static void Main(string[] args)
         {
-            BoundedBuffer buffer = new BoundedBuffer(100);
+            BoundedBuffer buffer = new BoundedBuffer(3);
             Producer p = new Producer(buffer, 10);
-            Consumer c = new Consumer(buffer, 10);
-
+            Consumer c = new Consumer(buffer, 1);
             Thread pThread = new Thread(p.Run);
             Thread cThread = new Thread(c.Run);
+            pThread.Start();
+            cThread.Start();
         }
     }
 }

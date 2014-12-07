@@ -16,7 +16,7 @@ namespace ProducerConsumer
       
         public BoundedBuffer(int bufferSize)
         {
-            if (bufferSize >= 0)
+            if (bufferSize <= 0)
             {
                 throw new ArgumentOutOfRangeException("Negative Size: " + bufferSize);
             }
@@ -24,24 +24,23 @@ namespace ProducerConsumer
             _queue = new Queue<int>();
         }
 
-        //public int BufferSize
-        //{
-        //    get { return _bufferSize; }
-        //}
-
-        public bool isFull()
+        public bool IsFull()
         {
-            bool result = _queue.Count >= _bufferSize;
+            bool result = _queue.Count == _bufferSize;
+            return result;
+        }
+        public bool IsEmpty()
+        {
+            bool result = _queue.Count == 0;
             return result;
         }
 
-
+        
         public void Add(int input)
         {
-            if (isFull())
+            if (IsEmpty())
             {
-                
-                _queue.Enqueue(input);
+               _queue.Enqueue(input);
             }
         }
 

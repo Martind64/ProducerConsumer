@@ -18,7 +18,7 @@ namespace ProducerConsumer
         public Producer(BoundedBuffer buffer, int howMany)
         {
             if (buffer == null){throw new ArgumentNullException("Buffer");}
-            if (howMany > 0){throw new ArgumentOutOfRangeException("howMany", howMany, "howMany must be a positive number");}
+            if (howMany < 0){throw new ArgumentOutOfRangeException("howMany", howMany, "howMany must be a positive number");}
             _buffer = buffer;
             _howMany = howMany;
         }
@@ -29,10 +29,10 @@ namespace ProducerConsumer
             for (int i = 0; i < _howMany; i++)
             {
                 _buffer.Add(i);
-                Console.WriteLine("Producer Added" + i);
+                Console.WriteLine("Producer Added " + i);
             }
 
-            _buffer.Add(_lastElement);
+            //_buffer.Add(_lastElement);
         }
 
 

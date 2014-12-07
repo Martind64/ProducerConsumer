@@ -9,4 +9,3 @@ C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\obj\De
 C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\obj\Debug\ProducerConsumer.pdb
 C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\bin\Debug\ProducerConsumer.exe
 C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\bin\Debug\ProducerConsumer.pdb
-C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\obj\Debug\ProducerConsumer.csprojResolveAssemblyReference.cache
