@@ -2,28 +2,46 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ProducerConsumer
 {
     public class BoundedBuffer
     {
+
         private Queue<int> _queue;
-        private int _buffersize;
-
-
-        public BoundedBuffer(int buffersize)
+        private int _bufferSize;
+        
+        public BoundedBuffer(int bufferSize)
         {
-            _buffersize = buffersize;
+            if (bufferSize >= 0)
+            {
+                throw new ArgumentOutOfRangeException("Negative Size" + bufferSize);
+            }
+            bufferSize = _bufferSize;
             _queue = new Queue<int>();
         }
 
+        //public int BufferSize
+        //{
+        //    get { return _bufferSize; }
+        //}
 
-
-        public bool IsFull()
+        public bool isFull()
         {
-            bool result = _queue.Count >= _buffersize; 
+            bool result = _queue.Count >= _bufferSize;
             return result;
+        }
+
+
+        public void Add(int input)
+        {
+            if (isFull())
+            {
+                
+                _queue.Enqueue(input);
+            }
         }
 
         public int Take()
@@ -31,13 +49,6 @@ namespace ProducerConsumer
             return _queue.Dequeue();
         }
 
-        public void Add(int input)
-        {
-            if (IsFull())
-            {
-                _queue.Enqueue(input);
-            }
-        }
 
 
     }
