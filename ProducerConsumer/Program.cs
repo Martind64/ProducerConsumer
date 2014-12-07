@@ -11,7 +11,7 @@ namespace ProducerConsumer
     {
         static void Main(string[] args)
         {
-            IBuffer buffer = new BoundedBuffer(100);
+            BoundedBuffer buffer = new BoundedBuffer(100);
             Producer p = new Producer(buffer, 10);
             Consumer c = new Consumer(buffer, 10);
 

@@ -8,13 +8,13 @@ namespace ProducerConsumer
 {
     public class Consumer
     {
-        private IBuffer _iBuffer;
+        private BoundedBuffer _buffer;
         private int _howMany;
-        public Consumer(IBuffer iBuffer, int howMany)
+        public Consumer(BoundedBuffer Buffer, int howMany)
         {
-            if (iBuffer == null) { throw new ArgumentNullException("Buffer"); }
+            if (Buffer == null) { throw new ArgumentNullException("Buffer"); }
             if (howMany > 0) { throw new ArgumentOutOfRangeException("howMany", howMany, "howMany must be a positive number"); }
-            _iBuffer = iBuffer;
+            _buffer = Buffer;
             _howMany = howMany;
         }
 
@@ -24,7 +24,7 @@ namespace ProducerConsumer
         {
             for (int i = 0; i < _howMany; i++)
             {
-                _iBuffer.Take();
+                _buffer.Take();
                 Console.WriteLine("Consumer Take" + i);
             }
                 
