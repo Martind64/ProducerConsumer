@@ -10,37 +10,28 @@ namespace UnitTestProject
     public class UnitTest1
     {
         [TestMethod]
-        public void TestAdd()
+        public void TestAddTake()
+
         {
-            BoundedBuffer buffer = new BoundedBuffer(50);
+            BoundedBuffer buffer = new BoundedBuffer(2);
 
-            
-            try
-            {
-                buffer.Add(5);
-                
-            }
-            catch (Exception)
-            {
-                Assert.Fail("Exception shouldn't have been thrown");
-            }
-        }
-
-        [TestMethod]
-
-        public void TestTake()
-        {
-            BoundedBuffer buffer = new BoundedBuffer(50);
+            Assert.AreEqual(4, buffer);
 
             try
             {
-                buffer.Take();
+                buffer.Add(2);
+                Assert.AreEqual(4, buffer);
             }
             catch (Exception)
             {
                 Assert.Fail("Exception shouldn't have been thrown");
             }
 
+
         }
+
+
+
     }
 }
+

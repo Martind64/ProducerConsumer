@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProducerConsumer
+namespace ProducerConsumerFirst
 {
     class Program
     {
         static void Main(string[] args)
         {
-            BoundedBuffer bf = new BoundedBuffer(20);
-
-
-            bf.Take();
         }
     }
 }

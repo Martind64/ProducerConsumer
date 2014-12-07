@@ -5,3 +5,10 @@ C:\Users\Martin\Documents\Projekter\ProducerConsumer\UnitTestProject\bin\Debug\P
 C:\Users\Martin\Documents\Projekter\ProducerConsumer\UnitTestProject\bin\Debug\ProducerConsumer.pdb
 C:\Users\Martin\Documents\Projekter\ProducerConsumer\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Users\Martin\Documents\Projekter\ProducerConsumer\UnitTestProject\obj\Debug\UnitTestProject.pdb
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\UnitTestProject\bin\Debug\UnitTestProject.dll
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\UnitTestProject\bin\Debug\UnitTestProject.pdb
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\UnitTestProject\bin\Debug\ProducerConsumer.exe
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\UnitTestProject\bin\Debug\ProducerConsumer.pdb
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\UnitTestProject\obj\Debug\UnitTestProject.dll
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\UnitTestProject\obj\Debug\UnitTestProject.pdb
