@@ -10,11 +10,12 @@ namespace ProducerConsumer
     public interface IBuffer
     {
 
-        int Count();
+        //int Count();
 
-        bool IsEmpty();
+        //bool IsEmpty();
 
         int Take();
+
         void Add(int element);
 
 

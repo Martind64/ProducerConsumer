@@ -7,19 +7,20 @@ using System.Threading.Tasks;
 
 namespace ProducerConsumer
 {
-    public class BoundedBuffer
+    public class BoundedBuffer : IBuffer
     {
 
         private Queue<int> _queue;
         private int _bufferSize;
-        
+
+      
         public BoundedBuffer(int bufferSize)
         {
             if (bufferSize >= 0)
             {
-                throw new ArgumentOutOfRangeException("Negative Size" + bufferSize);
+                throw new ArgumentOutOfRangeException("Negative Size: " + bufferSize);
             }
-            bufferSize = _bufferSize;
+            _bufferSize = bufferSize;
             _queue = new Queue<int>();
         }
 
