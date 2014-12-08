@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ProducerConsumer
@@ -10,10 +11,14 @@ namespace ProducerConsumer
     {
         static void Main(string[] args)
         {
-            BoundedBuffer bf = new BoundedBuffer(20);
-
-
-            bf.Take();
+            BoundedBuffer buffer = new BoundedBuffer(3);
+            Producer p = new Producer(buffer, 5);
+            Consumer c = new Consumer(buffer, 4);
+            Thread pThread = new Thread(p.Run);
+            Thread cThread = new Thread(c.Run);
+            pThread.Start();
+            cThread.Start();
         }
     }
 }
+ 

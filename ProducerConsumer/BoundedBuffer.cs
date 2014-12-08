@@ -7,46 +7,57 @@ using System.Threading.Tasks;
 
 namespace ProducerConsumer
 {
-    public class BoundedBuffer
+    public class BoundedBuffer 
     {
 
         private Queue<int> _queue;
         private int _bufferSize;
-        
+
+      
         public BoundedBuffer(int bufferSize)
         {
-            if (bufferSize >= 0)
+            if (bufferSize <= 0)
             {
-                throw new ArgumentOutOfRangeException("Negative Size" + bufferSize);
+                throw new ArgumentOutOfRangeException("Negative Size: " + bufferSize);
             }
-            bufferSize = _bufferSize;
+            _bufferSize = bufferSize;
             _queue = new Queue<int>();
         }
 
-        //public int BufferSize
-        //{
-        //    get { return _bufferSize; }
-        //}
-
-        public bool isFull()
+        public bool IsFull()
         {
-            bool result = _queue.Count >= _bufferSize;
+            bool result = _queue.Count == _bufferSize;
+            return result;
+        }
+        public bool IsEmpty()
+        {
+            bool result = _queue.Count == 0;
             return result;
         }
 
-
+        
         public void Add(int input)
         {
-            if (isFull())
+            Monitor.Enter(_queue);
+            if (IsFull())
             {
-                
-                _queue.Enqueue(input);
+                Monitor.Wait(_queue);
             }
+
+            _queue.Enqueue(input);
         }
 
         public int Take()
         {
+            Monitor.Enter(_queue);
+
+            while (IsEmpty())
+            {
+                Monitor.Wait(_queue);
+            }
+
             return _queue.Dequeue();
+
         }
 
 

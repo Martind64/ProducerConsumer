@@ -9,32 +9,31 @@ namespace ProducerConsumer
 {
     public class Producer
     {
-        private readonly IBuffer _iBuffer;
+
+        private BoundedBuffer _buffer;
         private int _howMany;
-        private int _lastElement = -1;
+        public static int _lastElement = -1;
 
-        
 
-        public Producer(IBuffer buffer, int howmany)
+        public Producer(BoundedBuffer buffer, int howMany)
         {
-            if (buffer == null){throw new ArgumentNullException("buffer");}
-            if (howmany > 0){throw new ArgumentOutOfRangeException("howmany", howmany, "howmany must be a positive number");}
-
-            _iBuffer = buffer;
-            _howMany = howmany;
+            if (buffer == null){throw new ArgumentNullException("Buffer");}
+            if (howMany < 0){throw new ArgumentOutOfRangeException("howMany", howMany, "howMany must be a positive number");}
+            _buffer = buffer;
+            _howMany = howMany;
         }
-
 
         public void Run()
         {
+
             for (int i = 0; i < _howMany; i++)
             {
-                _iBuffer.Add(i);
-                Console.WriteLine("Producer Added" + i);
+                _buffer.Add(i);
+                Console.WriteLine("Producer Added " + i);
             }
-            _iBuffer.Add(_lastElement);
-        }
 
+            
+        }
 
 
     }

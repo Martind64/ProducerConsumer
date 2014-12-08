@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoundedBuffer.cs" />
-    <Compile Include="IBuffer.cs" />
+    <Compile Include="Consumer.cs" />
     <Compile Include="Producer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
