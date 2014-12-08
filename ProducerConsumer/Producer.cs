@@ -12,7 +12,7 @@ namespace ProducerConsumer
 
         private BoundedBuffer _buffer;
         private int _howMany;
-        public static int _lastElement = -1;
+        public static readonly int _lastElement = -1;
 
 
         public Producer(BoundedBuffer buffer, int howMany)
@@ -32,6 +32,7 @@ namespace ProducerConsumer
                 Console.WriteLine("Producer Added " + i);
             }
 
+            _buffer.Add(_lastElement);
             
         }
 

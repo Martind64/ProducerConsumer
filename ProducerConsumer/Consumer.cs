@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,12 +24,17 @@ namespace ProducerConsumer
 
         public void Run()
         {
-            for (int i = 0; i < _howMany; i++)
+            while (true)
             {
-                _buffer.Take();
-                Console.WriteLine("Consumer Consumes" + i);
+                int element = _buffer.Take();
+
+                if (element == Producer._lastElement)
+                {
+                    break;
+                }
+
+                Console.WriteLine("Consumer consumed " + element);
             }
-                    
             
         }
     }
