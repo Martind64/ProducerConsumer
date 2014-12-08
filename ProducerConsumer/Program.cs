@@ -13,11 +13,14 @@ namespace ProducerConsumer
         {
             BoundedBuffer buffer = new BoundedBuffer(3);
             Producer p = new Producer(buffer, 5);
-            Consumer c = new Consumer(buffer, 4);
+            Consumer c = new Consumer(buffer);
             Thread pThread = new Thread(p.Run);
             Thread cThread = new Thread(c.Run);
             pThread.Start();
             cThread.Start();
+
+
+
         }
     }
 }
