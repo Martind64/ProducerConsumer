@@ -22,16 +22,12 @@ namespace ProducerConsumer
 
         public void Run()
         {
-            while (true)
+            for (int i = 0; i < _howMany; i++)
             {
-                    for (int i = 0; i < _howMany; i++)
-                    {
-                        _buffer.Take();
-                        Console.WriteLine("Consumer Consumes" + _howMany);
-                    }
-                
+                _buffer.Take();
+                Console.WriteLine("Consumer Consumes" + i);
             }
-            
+                    
             
         }
     }
