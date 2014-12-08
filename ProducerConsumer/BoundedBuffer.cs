@@ -43,6 +43,7 @@ namespace ProducerConsumer
             {
                 Monitor.Wait(_queue);
             }
+            
 
             _queue.Enqueue(input);
         }
