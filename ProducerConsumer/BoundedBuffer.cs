@@ -38,15 +38,26 @@ namespace ProducerConsumer
         
         public void Add(int input)
         {
-            if (IsEmpty())
+            Monitor.Enter(_queue);
+            if (IsFull())
             {
-               _queue.Enqueue(input);
+                Monitor.Wait(_queue);
             }
+
+            _queue.Enqueue(input);
         }
 
         public int Take()
         {
+            Monitor.Enter(_queue);
+
+            while (IsEmpty())
+            {
+                Monitor.Wait(_queue);
+            }
+
             return _queue.Dequeue();
+
         }
 
 

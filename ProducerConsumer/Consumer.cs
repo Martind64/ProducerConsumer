@@ -24,15 +24,12 @@ namespace ProducerConsumer
         {
             while (true)
             {
-                //int take = _buffer.Take();
-
-                for (int i = 0; i < _howMany; i++)
-                {
-                    _buffer.Take();
-                    Console.WriteLine("Consumer Consumes" + _howMany);
-                }
-
-
+                    for (int i = 0; i < _howMany; i++)
+                    {
+                        _buffer.Take();
+                        Console.WriteLine("Consumer Consumes" + _howMany);
+                    }
+                
             }
             
             
