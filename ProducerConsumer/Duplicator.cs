@@ -12,6 +12,12 @@ namespace ProducerConsumer
         private BoundedBuffer _outgoingBuffer;
         private BoundedBuffer _outgoingBuffer2;
 
+        public Duplicator(BoundedBuffer ingoingBuffer, BoundedBuffer outgoingBuffer, BoundedBuffer outgoingBuffer2)
+        {
+            _ingoingBuffer = ingoingBuffer;
+            _outgoingBuffer = outgoingBuffer;
+            _outgoingBuffer2 = outgoingBuffer2;
+        }
 
 
     }
