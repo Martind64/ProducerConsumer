@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProducerConsumer
 {
-    class UnboundedBuffer
+    public class UnboundedBuffer : IBuffer
     {
         private Queue<int> _queue;
         private readonly int _bufferSize;
@@ -63,5 +63,5 @@ namespace ProducerConsumer
 
 
     }
-    }
+    
 }

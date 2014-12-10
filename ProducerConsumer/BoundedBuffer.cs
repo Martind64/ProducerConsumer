@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProducerConsumer
 {
-    public class BoundedBuffer 
+    public class BoundedBuffer : IBuffer
     {
 
         private Queue<int> _queue;

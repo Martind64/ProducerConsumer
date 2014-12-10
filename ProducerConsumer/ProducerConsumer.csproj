@@ -44,6 +44,7 @@
     <Compile Include="BoundedBuffer.cs" />
     <Compile Include="Consumer.cs" />
     <Compile Include="Duplicator.cs" />
+    <Compile Include="IBuffer.cs" />
     <Compile Include="MiddleMan.cs" />
     <Compile Include="Producer.cs" />
     <Compile Include="Program.cs" />
