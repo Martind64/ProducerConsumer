@@ -11,10 +11,14 @@ namespace ProducerConsumer
     {
 
         private Queue<int> _queue;
-        private int _bufferSize;
+        private readonly int _bufferSize;
 
-      
-        public BoundedBuffer(int bufferSize)
+        public int BufferSize
+        {
+            get { return _bufferSize; }
+        }
+
+      public BoundedBuffer(int bufferSize)
         {
             if (bufferSize <= 0)
             {

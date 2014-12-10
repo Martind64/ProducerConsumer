@@ -14,13 +14,12 @@ namespace UnitTestProject
 
         {
             BoundedBuffer buffer = new BoundedBuffer(2);
-
-            Assert.AreEqual(4, buffer);
-
+            
+            Assert.AreEqual(2, buffer.BufferSize);
             try
             {
-                buffer.Add(2);
-                Assert.AreEqual(4, buffer);
+                buffer.Add(-1);
+                Assert.Fail();
             }
             catch (Exception)
             {
