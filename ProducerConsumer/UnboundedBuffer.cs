@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProducerConsumer
 {
-    public class UnboundedBuffer : IBuffer
+    public class UnboundedBuffer : AbstractBuffer, IBuffer
     {
         private Queue<int> _queue;
         private readonly int _bufferSize;
@@ -39,7 +39,7 @@ namespace ProducerConsumer
         }
 
         
-        public void Add(int input)
+        public override void Add(int input)
         {
             _queue.Enqueue(input);
             
@@ -47,7 +47,7 @@ namespace ProducerConsumer
             _queue.Enqueue(input);
         }
 
-        public int Take()
+        public override int Take()
         {
             Monitor.Enter(_queue);
 

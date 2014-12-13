@@ -11,7 +11,7 @@ namespace ProducerConsumer
     {
         static void Main(string[] args)
         {
-            BoundedBuffer buffer = new BoundedBuffer(3);
+            BoundedBuffer buffer = new BoundedBuffer(5);
             Producer p = new Producer(buffer, 5);
             Consumer c = new Consumer(buffer);
             Thread pThread = new Thread(p.Run);
@@ -20,7 +20,7 @@ namespace ProducerConsumer
             cThread.Start();
             
 
-
+            
         }
     }
 }

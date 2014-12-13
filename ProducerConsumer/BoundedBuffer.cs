@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ProducerConsumer
 {
-    public class BoundedBuffer : IBuffer
+    public class BoundedBuffer : AbstractBuffer, IBuffer 
     {
-
+        
         private Queue<int> _queue;
         private readonly int _bufferSize;
 
@@ -33,6 +33,7 @@ namespace ProducerConsumer
             bool result = _queue.Count == _bufferSize;
             return result;
         }
+
         public bool IsEmpty()
         {
             bool result = _queue.Count == 0;
@@ -40,7 +41,7 @@ namespace ProducerConsumer
         }
 
         
-        public void Add(int input)
+        public override void Add(int input)
         {
             Monitor.Enter(_queue);
             if (IsFull())
@@ -52,7 +53,7 @@ namespace ProducerConsumer
             _queue.Enqueue(input);
         }
 
-        public int Take()
+        public override int Take()
         {
             Monitor.Enter(_queue);
 

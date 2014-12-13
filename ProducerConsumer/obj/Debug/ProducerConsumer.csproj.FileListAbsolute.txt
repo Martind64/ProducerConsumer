@@ -5,8 +5,8 @@ C:\Users\Martin\Documents\Projekter\ProducerConsumer\ProducerConsumer\bin\Debug\
 C:\Users\Martin\Documents\Projekter\ProducerConsumer\ProducerConsumer\obj\Debug\ProducerConsumer.exe
 C:\Users\Martin\Documents\Projekter\ProducerConsumer\ProducerConsumer\obj\Debug\ProducerConsumer.pdb
 C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\bin\Debug\ProducerConsumer.exe.config
-C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\obj\Debug\ProducerConsumer.exe
-C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\obj\Debug\ProducerConsumer.pdb
 C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\bin\Debug\ProducerConsumer.exe
 C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\bin\Debug\ProducerConsumer.pdb
 C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\obj\Debug\ProducerConsumer.csprojResolveAssemblyReference.cache
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\obj\Debug\ProducerConsumer.exe
+C:\Users\Delfs\Documents\Projekter\ProducerConsumerFirst\ProducerConsumer\obj\Debug\ProducerConsumer.pdb

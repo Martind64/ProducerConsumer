@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractBuffer.cs" />
     <Compile Include="BoundedBuffer.cs" />
     <Compile Include="Consumer.cs" />
     <Compile Include="Duplicator.cs" />
@@ -52,7 +53,9 @@
     <Compile Include="UnboundedBuffer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
